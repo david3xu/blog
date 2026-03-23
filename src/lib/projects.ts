@@ -13,7 +13,7 @@ export const projects: Project[] = [
     name: "Datacore MCP Server",
     description: "The problem: AI apps can't see each other's work. The solution: one MCP server, every AI reads and writes to it. 20,000+ events from 15 sources, 4 companies' AI tools connected.",
     tech: ["JavaScript", "MCP SDK", "Node.js", "JSONL"],
-    link: "#",
+    link: "https://github.com/david3xu/datacore",
     emoji: "◆",
   },
   {
