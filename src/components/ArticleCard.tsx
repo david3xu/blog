@@ -27,14 +27,12 @@ export default function ArticleCard({ article, index = 0 }: { article: Article; 
         <a href={href} target="_blank" rel="noopener noreferrer">
           <h3 className="font-[var(--font-serif)] text-2xl font-normal leading-snug group-hover:text-[var(--color-accent)] transition-colors">
             {article.title}
-            {article.draft && <span className="font-[var(--font-mono)] text-[0.65rem] text-[var(--color-accent)] ml-3 align-middle">DRAFT</span>}
           </h3>
         </a>
       ) : (
         <Link href={href}>
           <h3 className="font-[var(--font-serif)] text-2xl font-normal leading-snug group-hover:text-[var(--color-accent)] transition-colors">
             {article.title}
-            {article.draft && <span className="font-[var(--font-mono)] text-[0.65rem] text-[var(--color-accent)] ml-3 align-middle">DRAFT</span>}
           </h3>
         </Link>
       )}

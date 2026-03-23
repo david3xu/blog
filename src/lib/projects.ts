@@ -11,7 +11,7 @@ export const projects: Project[] = [
     name: "Datacore MCP Server",
     description: "Cross-agent memory layer — MCP server with log_event, search, and get_tasks tools. 4 AI apps from 4 companies share one data store.",
     tech: ["JavaScript", "MCP SDK", "Node.js", "JSONL"],
-    link: "https://github.com/david3xu/datacore",
+    link: "#",
     emoji: "◆",
   },
   {

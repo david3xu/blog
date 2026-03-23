@@ -6,7 +6,7 @@ import { getAllArticles } from "@/lib/articles";
 import { projects } from "@/lib/projects";
 
 export default function Home() {
-  const articles = getAllArticles().slice(0, 2);
+  const articles = getAllArticles().slice(0, 3);
   return (
     <div className="max-w-3xl mx-auto px-8">
       <Navigation />
