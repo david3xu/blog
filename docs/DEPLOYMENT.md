@@ -43,11 +43,11 @@ vercel --yes --prod
 - Build: 47 seconds, 9 static pages generated
 - Vercel project: david-xus-projects/blog
 
-## Current Content (needs updating)
-- Hero: still says "Student at Curtin University" — update to lead with what you build
-- Projects: OpenClaw, Datacore, AzureConflux — drop AzureConflux, update Datacore description
-- Articles: 3 existing (linkedin posting, rate limit fix, data lakehouse)
-- Missing: MCP article, WA Health pipeline project card
+## Current Content (March 23, 2026)
+- Hero: thesis-driven ("AI is only as good as the data behind it")
+- Projects: grouped by problem (Agent memory, Data pipelines)
+- Articles: 3 (1 published on DEV.to, 2 stubs)
+- See docs/DESIGN.md for full content plan
 
 ## Auto-Deploy Workflow
 After initial setup, all future updates are:
