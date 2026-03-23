@@ -15,8 +15,8 @@ export const projects: Project[] = [
     emoji: "◆",
   },
   {
-    name: "OpenClaw Contributions",
-    description: "3 bug fixes on fork for the 247K-star AI gateway — macOS platform enum, cross-provider model fallback, rate limit handling.",
+    name: "OpenClaw (fork)",
+    description: "3 bug fixes + LinkedIn extension on personal fork of the 247K-star AI gateway. Deep source-level work with agent orchestration and multi-provider routing.",
     tech: ["TypeScript", "Node.js", "MCP"],
     link: "https://github.com/david3xu/openclaw",
     emoji: "🦞",

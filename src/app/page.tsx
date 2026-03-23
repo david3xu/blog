@@ -22,7 +22,7 @@ export default function Home() {
             bg-[var(--color-surface)] py-5 pr-6">
             <p className="text-sm text-[var(--color-dim)] leading-relaxed">
               Building agent infrastructure, MCP servers, and data coordination systems.
-              Contributing to{" "}
+              Built on{" "}
               <span className="text-[var(--color-accent)]">OpenClaw</span> (247K★ AI gateway),
               building <span className="text-[var(--color-accent)]">Datacore</span> (cross-agent memory via MCP),
               and shipping data pipelines on Azure and Microsoft Fabric.
