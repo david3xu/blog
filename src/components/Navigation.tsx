@@ -21,7 +21,7 @@ export default function Navigation() {
             </h1>
           </Link>
           <p className="font-[var(--font-mono)] text-xs text-[var(--color-dim)] mt-2 tracking-wide">
-            AI Infrastructure · Data Engineering · Azure
+            AI Data Architecture
           </p>
         </div>
         <nav className="flex gap-6">

@@ -15,7 +15,7 @@ export default function Writing() {
         </h2>
         <p className="text-[var(--color-dim)] text-sm mb-4"
           style={{ animation: "fadeIn 0.6s ease" }}>
-          Building in public — AI gateways, data engineering, Azure, open source.
+          Ideas about AI data architecture — from building, not reading.
         </p>
         {articles.map((a, i) => <ArticleCard key={a.slug} article={a} index={i} />)}
       </main>
