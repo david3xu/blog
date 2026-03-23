@@ -1,114 +1,107 @@
-# Blog Design v2 — Ideas, Not Biography
+# Blog Design v3 — After jnsgruk Research
 
-> The blog showcases THINKING, not a person.
-> No career history. No "about me."
-> Show: what I understand, what I see, what I built to prove it.
-> Workflow: see docs/WORKFLOW.md (design → preview → deploy)
+> Key insight: the blog IS the portfolio. Articles replace project cards.
+> Each article tells the story of something built.
+> Updated: March 24, 2026 (after studying jnsgruk's 34 posts over 6 years)
 
-## The Thesis
+## What we learned (docs/RESEARCH-JNSGRUK.md)
 
-"AI is only as good as the data behind it."
+His blog has NO "Projects" page. Every post follows:
+1. "I had this problem"
+2. "Here's how I solved it"  
+3. "Here's what I learned"
+4. Link to the repo
 
-## Home Page — The idea, then the proof
+Posts build on each other as series. ~1 post/month matching build pace.
+Titles are specific problems, not vague topics.
+
+## New page structure
+
+### Home — Thesis + recent articles (no project cards)
 
 ```
 David Xu
-AI Infrastructure · Data Engineering
+AI Data Architecture
 
 "AI is only as good as the data behind it."
 
 Every AI app today is context-starved. Claude forgets what GPT did.
-Gemini can't see what Codex built. You become the human relay between
-AIs that should be sharing knowledge automatically.
+Gemini can't see what Codex built. You become the human relay
+between AIs that should be sharing knowledge automatically.
 
 The fix isn't better models. It's better data architecture.
 
-THREE IDEAS I'M BUILDING AROUND:
+WHAT I'M BUILDING AROUND
 
-◆ Shared memory for AI agents
-  Multiple AIs, one data layer, zero copy-pasting.
-  → Datacore MCP Server
+  ◆ Shared memory for AI agents
+  ◇ Memory has layers
+  ◇ Data quality is progressive
 
-◇ Memory has layers
-  Not all memory is equal. Identity (instant), working (ephemeral),
-  project (on-demand), shared (persistent). Each has a reason.
-  → 4-layer memory architecture
-
-◇ Data quality is progressive
-  Raw → clean → curated. Don't transform everything upfront.
-  Let usage reveal what matters.
-  → Medallion pattern applied to AI agent data
+RECENT THINKING
+  → [articles, not project cards]
 ```
 
-No career. No "previously at UWA." Just: here's the problem,
-here's my thinking, here's what I built.
+### Writing — THE portfolio (replaces Projects)
 
-## Projects Page — Problems and solutions
+Each article is a project showcase:
+- "Why AI agents need shared memory" → IS the Datacore showcase
+- "4 memory layers every system needs" → IS the architecture showcase
+- "Debugging OpenClaw's rate limit" → IS the code contribution showcase
 
-```
-WHAT I'M BUILDING
+No separate Projects page needed. If someone wants repos,
+links are in the articles.
 
-Datacore MCP Server
-  The problem: AI apps can't see each other's work.
-  The solution: One MCP server, every AI reads and writes to it.
-  20,000+ events from 15 sources, 4 companies' AI tools connected.
-  → [repo]
+### Projects page — REMOVE or make minimal
 
-Memory Architecture
-  The problem: every AI wastes tokens loading context it doesn't need.
-  The solution: 4 layers — each exists because it has a unique access
-  pattern the others can't serve. As shared memory matures, private
-  memory shrinks from 6000 to 500 tokens.
-  → [diagram + design doc]
+Option A: Remove entirely. Articles ARE the projects.
+Option B: Keep as a minimal list of repos with one-line descriptions.
+         No cards, no tech tags, no elaborate descriptions.
 
-Data Architecture (local → Azure)
-  The problem: raw events aren't answers.
-  The solution: Bronze (capture everything) → Silver (make it searchable)
-  → Gold (curate the answers). Local-first, Azure Databricks target.
-  → [architecture diagram]
+## Articles to write (in priority order)
 
-WA Health ED Pipeline
-  Medallion pipeline on Microsoft Fabric. Hospital data through
-  Bronze/Silver/Gold Delta Lake layers with quality tests.
-  → [repo]
-```
+### 1. "Why AI agents need shared memory"
+- Problem: 4 AIs, 4 companies, zero shared context
+- Solution: Datacore MCP server (link to repo)
+- Numbers: 20,000+ events, 15 sources, 4 companies
+- Architecture diagram included
+- This replaces the Datacore project card
 
-No "OpenClaw (fork)" as a standalone project. OpenClaw is infrastructure
-I used — if relevant, mention it inside Datacore's description as
-"runs on OpenClaw gateway" but it's not a project card.
+### 2. "4 memory layers every multi-agent system needs"
+- Problem: AIs waste tokens loading unneeded context
+- Solution: Identity / Working / Project / Shared
+- The 6000→500 token insight
+- Memory architecture diagram included
+- This is original thinking — nobody else has written this
 
-## Writing Page — Ideas, not tutorials
+### 3. "How I debug unfamiliar codebases (OpenClaw rate limit story)"
+- Problem: 50s fallback time
+- Solution: stream wrapper intercepting rate limits
+- What I learned: pi-sdk retry loop, model selection pipeline
+- Shows: I can read and fix complex TypeScript
+- This replaces the OpenClaw project card
 
-```
-THINKING
-
-"Why AI agents need shared memory"
-  — The core insight. 4 AIs, 4 companies, zero shared context.
-
-"4 memory layers every multi-agent system needs"
-  — The architecture pattern. Not Datacore-specific.
-
-"Data quality is the real AI problem"
-  — Why Medallion matters for AI, not just enterprise BI.
-```
-
-Each article starts with a problem, shows the thinking,
-then shows what was built. Never starts with a tool name.
+### 4. "Medallion architecture isn't just for enterprise BI"
+- Problem: enterprise pattern (Bronze/Silver/Gold) applied to AI agent data
+- How it's different from Databricks documentation
+- Our twist: each layer serves a different AI capability
+- Shows: data engineering thinking
 
 ## What's NOT on the site
 
 - No "About" page with career history
-- No "Student at Curtin"
+- No "Student at Curtin"  
 - No tool advertisements (OpenClaw, Copilot, etc.)
 - No "12 years in investment management"
-- No "Research Associate at UWA"
+- No elaborate project cards with tech tags
 
-If someone wants background, LinkedIn exists. The blog is for ideas.
+## Title rules (from jnsgruk analysis)
 
-## Footer — Minimal
+Good: specific problem → "Why AI agents need shared memory"
+Bad: vague topic → "My thoughts on AI data"
+Good: story → "How I debug unfamiliar codebases"
+Bad: tutorial → "Getting started with MCP"
 
-```
-© 2026 David Xu    GitHub · LinkedIn · DEV.to
-```
+## Pace rule
 
-No subtitle, no tagline. The work speaks.
+Write at the pace you build. ~1 post when you ship something real.
+Never write faster than you ship. The writing follows the work.
