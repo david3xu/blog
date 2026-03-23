@@ -1,6 +1,6 @@
 const socials = [
   { label: "GitHub", url: "https://github.com/david3xu" },
-  { label: "LinkedIn", url: "https://linkedin.com/in/" },
+  { label: "LinkedIn", url: "https://linkedin.com/in/david-xu" },
   { label: "DEV.to", url: "https://dev.to/david3xu" },
 ];
 

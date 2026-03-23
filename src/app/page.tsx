@@ -21,12 +21,12 @@ export default function Home() {
           <div className="mt-8 pl-5 border-l-2 border-[var(--color-accent)]
             bg-[var(--color-surface)] py-5 pr-6">
             <p className="text-sm text-[var(--color-dim)] leading-relaxed">
-              Student at Curtin University studying Science &amp; Engineering.
-              Currently contributing to{" "}
+              Building agent infrastructure, MCP servers, and data coordination systems.
+              Contributing to{" "}
               <span className="text-[var(--color-accent)]">OpenClaw</span> (247K★ AI gateway),
-              building <span className="text-[var(--color-accent)]">Datacore</span> (personal data lakehouse),
-              and designing <span className="text-[var(--color-accent)]">AzureConflux</span> (Azure-native AI gateway).
-              Everything at zero cost using student resources.
+              building <span className="text-[var(--color-accent)]">Datacore</span> (cross-agent memory via MCP),
+              and shipping data pipelines on Azure and Microsoft Fabric.
+              Previously: Research Associate at UWA. 12 years in investment management.
             </p>
           </div>
         </div>

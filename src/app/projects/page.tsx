@@ -14,7 +14,7 @@ export default function Projects() {
         </h2>
         <p className="text-[var(--color-dim)] text-sm mb-8"
           style={{ animation: "fadeIn 0.6s ease" }}>
-          AI infrastructure and data engineering — all open source, all zero cost.
+          AI infrastructure and data engineering — open source.
         </p>
         <div className="grid grid-cols-2 gap-4">
           {projects.map((p, i) => <ProjectCard key={p.name} project={p} index={i} />)}
